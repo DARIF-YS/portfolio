@@ -1,43 +1,4 @@
 
-<!-- ABOUT -->
-<section id="about" class="py-20 bg-gray-50 px-6">
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6">À propos</h2>
-    <p class="text-gray-700 leading-relaxed">
-      Passionné par la data et l’intelligence artificielle, je travaille sur
-      des projets mêlant Machine Learning, NLP, pipelines ETL et
-      déploiement cloud. J’accorde une grande importance à la qualité
-      du code, à la lisibilité et aux solutions orientées métier.
-    </p>
-  </div>
-</section>
-
-
-
-<!-- EXPERIENCE -->
-<section id="experience" class="py-20 bg-gray-50 px-6">
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-8">Expérience</h2>
-
-    <div class="space-y-6">
-      <div class="border-l-4 border-purple-600 pl-6">
-        <h3 class="font-semibold">Data & NLP Engineer Intern – Estatmar</h3>
-        <p class="text-sm text-gray-500">Juil – Sept 2025 · Casablanca</p>
-        <p class="text-gray-600 mt-2 text-sm">
-          Pipeline ETL, analyse de sentiments, dashboard KPI clients.
-        </p>
-      </div>
-
-      <div class="border-l-4 border-purple-600 pl-6">
-        <h3 class="font-semibold">AI Engineer Intern – SRM-CS</h3>
-        <p class="text-sm text-gray-500">Avr – Mai 2024 · Settat</p>
-        <p class="text-gray-600 mt-2 text-sm">
-          Reconnaissance faciale pour système de pointage.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- CONTACT -->
 <section id="contact" class="py-20 px-6">
