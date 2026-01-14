@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yassine DARIF | Portfolio</title>
 
   <!-- SEO -->
-  <meta name="description" content="Portfolio de Yassine Darif, Ingénieur IA & Data Scientist spécialisé en NLP, LLMs et Data Engineering">
+  <meta name="description" content="Portfolio of Yassine Darif - Data Scientist & ML Engineer">
 
-  <!-- Tailwind -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/profile1.png" type="image/x-icon">
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -17,35 +20,42 @@
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Custom Styles -->
   <style>
-    body { 
-      font-family: 'Inter', sans-serif; 
+    body {
+      font-family: 'Inter', sans-serif;
     }
+
     .main-container {
       border-left: 1px solid #e5e7eb;
       border-right: 1px solid #e5e7eb;
     }
+
     @media (max-width: 768px) {
       .main-container {
         border-left: none;
         border-right: none;
       }
     }
+
     .nav-container {
       border-left: 1px solid #e5e7eb;
       border-right: 1px solid #e5e7eb;
       margin: 0 auto;
     }
+
     .project-card {
       transition: all 0.3s ease;
       height: 100%;
       display: flex;
       flex-direction: column;
     }
+
     .project-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
     }
+
     .tech-badge {
       display: inline-block;
       padding: 0.25rem 0.75rem;
@@ -60,562 +70,555 @@
 
 <body class="bg-white text-gray-900">
 
-  <!-- Conteneur principal avec bordures latérales -->
-  <div class="max-w-5xl mx-auto main-container min-h-screen bg-white">
+<!-- Main container with side borders -->
+<div class="max-w-5xl mx-auto main-container min-h-screen bg-white" id="home" >
 
-    <!-- NAVBAR FIXE DANS LE CONTENEUR -->
-    <nav class="sticky top-0 bg-white z-50 border-b border-gray-200">
-      <div class="px-6 py-4 flex justify-between items-center">
-        <span class="font-bold text-xl"> / AI</span>
-        <div class="hidden md:flex gap-8 text-sm font-medium">
-          <a href="#about" class="hover:text-gray-700">À propos</a>
-          <a href="#projects" class="hover:text-gray-700">Projets</a>
-          <a href="#experience" class="hover:text-gray-700">Expérience</a>
-          <a href="#contact" class="text-gray-900 font-semibold">Contact</a>
-        </div>
+  <!-- NAVBAR -->
+  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">
+    <div class="px-6 py-4 flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="#top" class="text-lg font-bold tracking-tight">
+        Y<span class="text-gray-400">.</span>Darif
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
+        <a href="#home" class="hover:text-black transition">Home</a>
+        <a href="#experience" class="hover:text-black transition">Experience</a>
+        <a href="#projects" class="hover:text-black transition">Projects</a>
+        <a href="#skills" class="hover:text-black transition">Skills</a>
+        <a href="#education" class="hover:text-black transition">Education</a>
+        <a href="#contact"
+           class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition">
+          Contact
+        </a>
       </div>
-    </nav>
 
-    <!-- HERO -->
-    <section class="pt-16 pb-24 px-6">
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <!-- Colonne de gauche -->
-        <div class="flex justify-center">
-          <img src="./image.png"
-               alt="Photo Yassine Darif"
-               class="w-64 h-65 object-cover rounded-3xl border border-gray-300">
-        </div>
-        
-        <!-- Colonne de droite -->
-        <div>
-          <h1 class="text-4xl md:text-5xl font-bold mb-4">
-            Yassine Darif
-          </h1>
-          <h2 class="text-xl text-gray-700 font-semibold mb-6">
-            Ingénieur IA & Data Scientist
-          </h2>
-          <p class="text-gray-600 mb-8 leading-relaxed text-justify">
-            Étudiant en Master Systèmes Intelligents à l'INSEA, spécialisé en
-            Intelligence Artificielle, NLP, LLMs et Data Engineering.
-            Je conçois des solutions data de bout en bout, de la collecte
-            au déploiement.
-          </p>
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-xl">
+        <i class="fas fa-bars"></i>
+      </button>
 
-          <div class="flex gap-4">
-            <a href="#" aria-label="GitHub"
-               class="border border-gray-300 px-5 py-2 rounded-lg hover:bg-gray-100">
-              <i class="fab fa-github mr-2"></i>GitHub
-            </a>
-            <a href="#" aria-label="LinkedIn"
-               class="border border-gray-300 px-5 py-2 rounded-lg hover:bg-gray-100">
-              <i class="fab fa-linkedin mr-2"></i>LinkedIn
-            </a>
-            <a href="#contact"
-               class="bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-black">
-              Me contacter
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    
-    <!-- CORE SKILLS -->
-<section id="skills" class="py-20 px-6 bg-white">
-  <div class="max-w-5xl mx-auto">
-
-    <div class="text-center mb-14">
-      <h2 class="text-4xl font-bold text-gray-900 mb-3">Core Skills</h2>
-      <p class="text-gray-600">
-        Technologies et outils utilisés en Intelligence Artificielle & Data Engineering
-      </p>
     </div>
 
-    <!-- GRID -->
-    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-8 items-center">
-
-      <!-- Python -->
-      <div class="flex flex-col items-center gap-2">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="h-12" />
-        <span class="text-sm font-medium">Python</span>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 px-6 py-4 bg-white">
+      <div class="flex flex-col gap-4 text-sm font-medium text-gray-700">
+        <a href="#home" class="hover:text-black transition">Home</a>
+        <a href="#experience" class="hover:text-black">Experience</a>
+        <a href="#projects" class="hover:text-black">Projects</a>
+        <a href="#skills" class="hover:text-black">Skills</a>
+        <a href="#education" class="hover:text-black">Education</a>
+        <a href="#contact" class="hover:text-black">Contact</a>
       </div>
-
-      <!-- SQL -->
-      <div class="flex flex-col items-center gap-2">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="h-12" />
-        <span class="text-sm font-medium">SQL</span>
-      </div>
-
-      <!-- Scikit-learn -->
-      <div class="flex flex-col items-center gap-2">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" class="h-12" />
-        <span class="text-sm font-medium">scikit-learn</span>
-      </div>
-
-      <!-- TensorFlow -->
-      <div class="flex flex-col items-center gap-2">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" class="h-12" />
-        <span class="text-sm font-medium">TensorFlow</span>
-      </div>
-
-      <!-- spaCy -->
-      <div class="flex flex-col items-center gap-2">
-        <img src="https://cdn-avatars.huggingface.co/v1/production/uploads/1621946385351-60acee08af553873e6d96d0c.png" class="h-12" />
-        <span class="text-sm font-medium">spaCy</span>
-      </div>
-
-      <!-- OpenCV -->
-      <div class="flex flex-col items-center gap-2">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" class="h-12" />
-        <span class="text-sm font-medium">OpenCV</span>
-      </div>
-
-      <!-- LangChain -->
-      <div class="flex flex-col items-center gap-2">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc-QRqqtRi8EEyMCDcBawEio86I7MpmwMBTw&s" class="h-12 rounded-lg" />
-        <span class="text-sm font-medium">LangChain</span>
-      </div>
-
-      <!-- Hugging Face -->
-      <div class="flex flex-col items-center gap-2">
-        <img src="https://huggingface.co/front/assets/huggingface_logo.svg" class="h-12" />
-        <span class="text-sm font-medium">Hugging Face</span>
-      </div>
-
-      <!-- Ollama -->
-      <div class="flex flex-col items-center gap-2">
-        <img src="https://ollama.com/public/ollama.png" class="h-12" />
-        <span class="text-sm font-medium">Ollama</span>
-      </div>
-
-      <!-- FastAPI -->
-      <div class="flex flex-col items-center gap-2">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" class="h-12" />
-        <span class="text-sm font-medium">FastAPI</span>
-      </div>
-
-      <!-- Docker -->
-      <div class="flex flex-col items-center gap-2">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="h-12" />
-        <span class="text-sm font-medium">Docker</span>
-      </div>
-
-      <!-- Azure -->
-      <div class="flex flex-col items-center gap-2">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" class="h-12" />
-        <span class="text-sm font-medium">Microsoft Azure</span>
-      </div>
-
-      <!-- Linux -->
-      <div class="flex flex-col items-center gap-2">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" class="h-12" />
-        <span class="text-sm font-medium">Linux</span>
-      </div>
-
-      <!-- Git -->
-      <div class="flex flex-col items-center gap-2">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="h-12" />
-        <span class="text-sm font-medium">Git</span>
-      </div>
-
-      <!-- Looker Studio -->
-      <div class="flex flex-col items-center gap-2">
-        <img src="https://www.gstatic.com/analytics-lego/svg/ic_looker_studio.svg" class="h-12" />
-        <span class="text-sm font-medium">Looker Studio</span>
-      </div>
-
     </div>
-  </div>
-</section>
+  </nav>
 
-    <section id="experience" class="py-20 px-6 bg-gray-50">
-  <div class="max-w-6xl mx-auto">
-    
-    <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">Expérience</h2>
-    
-    <div class="grid md:grid-cols-2 gap-8">
-      
-      <!-- Carte 1 -->
-      <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 project-card">
-        <div class="flex items-start justify-between mb-6">
-          <div class="flex items-center gap-4">
-<div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-sm overflow-hidden">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWbFHSempFdKepYceHYSs1oZDku8z-4iGB5A&s" 
-       class="w-full h-full object-cover rounded-full" 
-       alt="Finso">
-</div>
+  <!-- HERO SECTION -->
+  <section class="pt-16 pb-24 px-6">
+    <div class="grid md:grid-cols-[1fr_2fr] gap-10 items-center">
 
-            <div>
-              <h3 class="text-xl font-bold text-gray-900">Data Engineer Intern</h3>
-              <p class="text-gray-500 text-sm">Finso · Casablanca</p>
-            </div>
-          </div>
-          <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-sm font-medium">3 mois</span>
-        </div>
-        
-        <p class="text-gray-600 mb-4 leading-relaxed">
-          Pipeline NLP pour analyser automatiquement les avis clients bancaires.
-          Développement d'un dashboard interactif pour visualisation des insights.
+      <!-- Left Column: Profile Image -->
+      <div class="flex justify-center">
+        <img src="./images/profile2.png"
+             alt="Yassine Darif Photo"
+             class="w-64 h-65 object-cover rounded-3xl border border-gray-300">
+      </div>
+
+      <!-- Right Column: Introduction -->
+      <div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-3">
+          Yassine Darif
+        </h1>
+
+        <h2 class="text-xl text-gray-700 font-semibold mb-4">
+          Data Scientist & ML Engineer
+        </h2>
+
+        <p class="text-gray-600 mb-4 leading-relaxed text-justify">
+          Master's student in Intelligent Systems at INSEA, specializing in Artificial Intelligence, NLP, LLMs, and Data Engineering. I design end-to-end data solutions, from data collection to deployment.
         </p>
-        
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="tech-badge">Python</span>
-          <span class="tech-badge">NLP</span>
-          <span class="tech-badge">Flask</span>
-          <span class="tech-badge">Airflow</span>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm mt-6">
+          <a href="https://github.com/DARIF-YS" class="flex items-center gap-2 px-4 py-1 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 transition">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+
+          <a href="https://www.linkedin.com/in/darif-yassine" class="flex items-center gap-2 px-4 py-1 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 transition">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+
+          <a href="./resume.pdf" class="flex items-center gap-2 px-4 py-1 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 transition">
+            <i class="fas fa-file-alt"></i> Resume
+          </a>
         </div>
-        
       </div>
-      
-      <!-- Carte 2 -->
-      <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 project-card">
-        <div class="flex items-start justify-between mb-6">
-          <div class="flex items-center gap-4">
-            <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-sm overflow-hidden">
-              <img src="https://srm.radeec.ma/gralteku/2024/09/logo.jpeg" 
-                   class="w-full h-full object-cover rounded-full" 
-               alt="TechCorp">
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience" class="py-20 px-6 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">Experience</h2>
+
+      <div class="grid md:grid-cols-1 gap-8">
+
+        <!-- Experience Card 1 -->
+        <div class="bg-white rounded-3xl p-3 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 project-card">
+          <div class="flex items-start justify-between mb-6">
+            <div class="flex items-center gap-4">
+              <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-sm overflow-hidden">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWbFHSempFdKepYceHYSs1oZDku8z-4iGB5A&s"
+                     class="w-full h-full object-cover rounded-full"
+                     alt="Finso">
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-900">Data Engineer Intern</h3>
+                <p class="text-gray-500 text-sm">Finso · Casablanca</p>
+              </div>
             </div>
-            <div>
-              <h3 class="text-xl font-bold text-gray-900">Data Analyst</h3>
-              <p class="text-gray-500 text-sm">TechCorp · Remote</p>
+            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-sm font-medium">3 months</span>
+          </div>
+
+          <p class="text-gray-600 mb-4 leading-relaxed text-justify">
+            Automated ETL pipeline and decision-making dashboard for the analysis of 27,000+ banking customer reviews.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">DBT</span>
+            <span class="tech-badge">PostgreSQL</span>
+            <span class="tech-badge">Airflow</span>
+            <span class="tech-badge">Docker</span>
+            <span class="tech-badge">Looker Studio</span>
+          </div>
+        </div>
+
+        <!-- Experience Card 2 -->
+        <div class="bg-white rounded-3xl p-3 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 project-card">
+          <div class="flex items-start justify-between mb-6">
+            <div class="flex items-center gap-4">
+              <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-sm overflow-hidden">
+                <img src="https://srm.radeec.ma/gralteku/2024/09/logo.jpeg"
+                     class="w-full h-full object-cover rounded-full"
+                     alt="SRM-CS">
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-900">AI Engineer Intern</h3>
+                <p class="text-gray-500 text-sm">SRM-CS · Settat</p>
+              </div>
+            </div>
+            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-sm font-medium">2 months</span>
+          </div>
+
+          <p class="text-gray-600 mb-4 leading-relaxed text-justify">
+            Intelligent attendance system based on facial recognition for employee tracking.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">OpenCV</span>
+            <span class="tech-badge">face_recognition</span>
+            <span class="tech-badge">Flask</span>
+            <span class="tech-badge">Bootstrap</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="py-20 px-6 bg-gradient-to-b to-white from-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-9">
+        <h2 class="text-4xl font-bold mb-4 text-gray-900">Projects</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+
+        <!-- Project 1 -->
+        <div class="group bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl transition">
+          <div class="relative h-60">
+            <img src="https://private-user-images.githubusercontent.com/168080528/529818470-1f0f3419-7c04-4a60-91bd-8ec51ee3b362.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Njg0MDA1MDYsIm5iZiI6MTc2ODQwMDIwNiwicGF0aCI6Ii8xNjgwODA1MjgvNTI5ODE4NDcwLTFmMGYzNDE5LTdjMDQtNGE2MC05MWJkLThlYzUxZWUzYjM2Mi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMTE0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDExNFQxNDE2NDZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mMjI0NTk5NDM5OTQ1MDJkMTUxNGRiNjE3MGJiZjBkMzRmYTE2ZGZkMTlhYjg4ZDQ0YTY0MzMxNjZjNGNhZDU0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.bxAcjXAZaXuBw6UZO4STM9V1bgS22JU4bPWs3hf0K98"
+                 class="w-full h-full group-hover:scale-110 transition duration-500" />
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <a href="https://github.com/DARIF-YS/fullstack-medbot-rag" target="_blank"
+                 class="text-white border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition">
+                View on GitHub
+              </a>
             </div>
           </div>
-          <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-sm font-medium">2 mois</span>
-        </div>
-        
-        <p class="text-gray-600 mb-4 leading-relaxed">
-          Modèles prédictifs pour analyse du comportement utilisateur.
-          Dashboards Tableau pour suivi des KPIs et optimisation des requêtes SQL.
-        </p>
-        
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="tech-badge">SQL</span>
-          <span class="tech-badge">Tableau</span>
-          <span class="tech-badge">Python</span>
-          <span class="tech-badge">BigQuery</span>
-        </div>
-      
-      
-    </div>
-  </div>
-</section>
-
-
-
-    <!-- PROJECTS - SECTION REDESIGNÉE -->
-    <section id="projects" class="py-20 px-6 bg-gradient-to-b to-white from-gray-50">
-      <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-9">
-          <h2 class="text-4xl font-bold mb-4 text-gray-900">Projets</h2>
+          <div class="p-6">
+            <h3 class="font-semibold text-lg text-gray-900 mb-2">Intelligent Medical Chatbot</h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Development of a RAG pipeline deployed on a full-stack web platform for medical assistance.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge">LangChain</span>
+              <span class="tech-badge">ChromaDB</span>
+              <span class="tech-badge">Gemini</span>
+              <span class="tech-badge">FastAPI</span>
+              <span class="tech-badge">Next.js</span>
+            </div>
+          </div>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          
-            <!-- Project 1 -->
+        <!-- Project 2 -->
         <div class="group bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl transition">
-        <div class="relative h-48">
-            <img src="https://www.travelmediagroup.com/wp-content/uploads/2022/06/bigstock-Stress-Level-Mood-Scale-Man-447658594-2880x1568.jpg"
-                class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
-            
+          <div class="relative h-60">
+            <img src="https://private-user-images.githubusercontent.com/168080528/526786919-4ca8b4c4-274f-4db6-9bda-2fc59cc69bf1.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Njg0MDA2MTcsIm5iZiI6MTc2ODQwMDMxNywicGF0aCI6Ii8xNjgwODA1MjgvNTI2Nzg2OTE5LTRjYThiNGM0LTI3NGYtNGRiNi05YmRhLTJmYzU5Y2M2OWJmMS5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMTE0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDExNFQxNDE4MzdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03OTViNDc2MDVkMmJiOTEwNWY5NzZkYzBmZGQ0OGJhMDM5NGYwYzExZjFlN2IwYjU5NTcyMDU5Y2IxNGE3NWFlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.6uQLTBl9lQk-mLBD1QbNFnwMMh21HQSBjag29ZeyLGg"
+                 class="w-full h-full group-hover:scale-110 transition duration-500" />
             <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-            <a href="https://github.com/yassinedarif/avis-clients" target="_blank"
-                class="text-white border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition">
-                Voir sur GitHub
-            </a>
+              <a href="https://github.com/DARIF-YS/driver-drowsiness-detection" target="_blank"
+                 class="text-white border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition">
+                View on GitHub
+              </a>
             </div>
-        </div>
-
-        <div class="p-6">
-            <h3 class="font-semibold text-lg text-gray-900 mb-2">Analyse d'avis clients bancaires</h3>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-lg text-gray-900 mb-2">Drowsiness Detection System</h3>
             <p class="text-gray-600 text-sm mb-4">
-            Pipeline NLP complet : scraping Google Maps, analyse de sentiments, API Flask et dashboard.
+              Development and cloud deployment of a CNN model for driver fatigue detection with 97% accuracy.
             </p>
-
             <div class="flex flex-wrap gap-2">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">NLP</span>
-            <span class="tech-badge">Airflow</span>
+              <span class="tech-badge">TensorFlow</span>
+              <span class="tech-badge">OpenCV</span>
+              <span class="tech-badge">FastAPI</span>
+              <span class="tech-badge">Docker</span>
+              <span class="tech-badge">Azure</span>
             </div>
-        </div>
+          </div>
         </div>
 
+        <!-- Project 3 -->
         <div class="group bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl transition">
-        <div class="relative h-48">
-            <img src="https://www.travelmediagroup.com/wp-content/uploads/2022/06/bigstock-Stress-Level-Mood-Scale-Man-447658594-2880x1568.jpg"
-                class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
-            
+          <div class="relative h-60">
+            <img src="https://www.bytestechnolab.com/wp-content/uploads/2024/01/Leveraging-WooCommerce-for-Enterprise-Level-E-commerce-Success-1.webp"
+                 class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
             <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-            <a href="https://github.com/yassinedarif/avis-clients" target="_blank"
-                class="text-white border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition">
-                Voir sur GitHub
-            </a>
+              <a href="#" target="_blank"
+                 class="text-white border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition">
+                View on GitHub
+              </a>
             </div>
-        </div>
-
-        <div class="p-6">
-            <h3 class="font-semibold text-lg text-gray-900 mb-2">Analyse d'avis clients bancaires</h3>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-lg text-gray-900 mb-2">Product Recommendation System</h3>
             <p class="text-gray-600 text-sm mb-4">
-            Pipeline NLP complet : scraping Google Maps, analyse de sentiments, API Flask et dashboard.
+              Development and cloud deployment of a hybrid product recommendation engine to enhance customer experience.
             </p>
-
             <div class="flex flex-wrap gap-2">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">NLP</span>
-            <span class="tech-badge">Airflow</span>
+              <span class="tech-badge">Scikit-Learn</span>
+              <span class="tech-badge">Streamlit</span>
+              <span class="tech-badge">Docker</span>
+              <span class="tech-badge">CI/CD</span>
+              <span class="tech-badge">Azure</span>
             </div>
-        </div>
+          </div>
         </div>
 
+        <!-- Project 4 -->
         <div class="group bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl transition">
-        <div class="relative h-48">
-            <img src="https://www.travelmediagroup.com/wp-content/uploads/2022/06/bigstock-Stress-Level-Mood-Scale-Man-447658594-2880x1568.jpg"
-                class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
-            
+          <div class="relative h-60">
+            <img src="https://private-user-images.githubusercontent.com/168080528/527073689-286f2486-2671-4d70-9cac-7113d0d12e0b.jpeg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Njg0MDA2NjEsIm5iZiI6MTc2ODQwMDM2MSwicGF0aCI6Ii8xNjgwODA1MjgvNTI3MDczNjg5LTI4NmYyNDg2LTI2NzEtNGQ3MC05Y2FjLTcxMTNkMGQxMmUwYi5qcGVnP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDExNCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjAxMTRUMTQxOTIxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NGMxM2UyYjE4Y2Q4N2JjMzYzOGM0YjdmY2RkNmVlZTRhNzA3MTZiZmE4MTVmNTU1ZGU3MDhkYTRjY2YyNTFjNSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.lRU4vw_tcZne81IV9WebnhpeiAThOxnt94E4q5EveP8"
+                 class="w-full h-full group-hover:scale-110 transition duration-500" />
             <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-            <a href="https://github.com/yassinedarif/avis-clients" target="_blank"
-                class="text-white border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition">
-                Voir sur GitHub
-            </a>
+              <a href="https://github.com/DARIF-YS/dirham-exchange-tracker" target="_blank"
+                 class="text-white border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition">
+                View on GitHub
+              </a>
             </div>
-        </div>
-
-        <div class="p-6">
-            <h3 class="font-semibold text-lg text-gray-900 mb-2">Analyse d'avis clients bancaires</h3>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-lg text-gray-900 mb-2">Moroccan Currency Market Analysis</h3>
             <p class="text-gray-600 text-sm mb-4">
-            Pipeline NLP complet : scraping Google Maps, analyse de sentiments, API Flask et dashboard.
+              Design of an end-to-end data solution for analyzing and visualizing exchange rates.
             </p>
-
             <div class="flex flex-wrap gap-2">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">NLP</span>
-            <span class="tech-badge">Airflow</span>
+              <span class="tech-badge">Selenium</span>
+              <span class="tech-badge">Pandas</span>
+              <span class="tech-badge">Airflow</span>
+              <span class="tech-badge">Looker Studio</span>
             </div>
-        </div>
+          </div>
         </div>
 
-                <div class="group bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl transition">
-        <div class="relative h-48">
-            <img src="https://www.travelmediagroup.com/wp-content/uploads/2022/06/bigstock-Stress-Level-Mood-Scale-Man-447658594-2880x1568.jpg"
-                class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
-            
+        <!-- Project 5 -->
+        <div class="group bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl transition">
+          <div class="relative h-60">
+            <img src="images/projects/finetuning.png"
+                 class="w-full h-full group-hover:scale-110 transition duration-500" />
             <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-            <a href="https://github.com/yassinedarif/avis-clients" target="_blank"
-                class="text-white border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition">
-                Voir sur GitHub
-            </a>
+              <a href="https://github.com/DARIF-YS/stable-diffusion-finetuning/tree/main" target="_blank"
+                 class="text-white border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition">
+                View on GitHub
+              </a>
             </div>
-        </div>
-
-        <div class="p-6">
-            <h3 class="font-semibold text-lg text-gray-900 mb-2">Analyse d'avis clients bancaires</h3>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-lg text-gray-900 mb-2">Stable Diffusion Model Fine-tuning</h3>
             <p class="text-gray-600 text-sm mb-4">
-            Pipeline NLP complet : scraping Google Maps, analyse de sentiments, API Flask et dashboard.
+              Fine-tuning of Stable Diffusion v1.5 via DreamBooth for generating high-quality custom images.
             </p>
-
             <div class="flex flex-wrap gap-2">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">NLP</span>
-            <span class="tech-badge">Airflow</span>
+              <span class="tech-badge">PyTorch</span>
+              <span class="tech-badge">Hugging Face</span>
+              <span class="tech-badge">Diffusers</span>
             </div>
-        </div>
-        </div>
-
-                <div class="group bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl transition">
-        <div class="relative h-48">
-            <img src="https://www.travelmediagroup.com/wp-content/uploads/2022/06/bigstock-Stress-Level-Mood-Scale-Man-447658594-2880x1568.jpg"
-                class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
-            
-            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-            <a href="https://github.com/yassinedarif/avis-clients" target="_blank"
-                class="text-white border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition">
-                Voir sur GitHub
-            </a>
-            </div>
-        </div>
-
-        <div class="p-6">
-            <h3 class="font-semibold text-lg text-gray-900 mb-2">Analyse d'avis clients bancaires</h3>
-            <p class="text-gray-600 text-sm mb-4">
-            Pipeline NLP complet : scraping Google Maps, analyse de sentiments, API Flask et dashboard.
-            </p>
-
-            <div class="flex flex-wrap gap-2">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">NLP</span>
-            <span class="tech-badge">Airflow</span>
-            </div>
-        </div>
-        </div>
-
-                <div class="group bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl transition">
-        <div class="relative h-48">
-            <img src="https://www.travelmediagroup.com/wp-content/uploads/2022/06/bigstock-Stress-Level-Mood-Scale-Man-447658594-2880x1568.jpg"
-                class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
-            
-            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-            <a href="https://github.com/yassinedarif/avis-clients" target="_blank"
-                class="text-white border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition">
-                Voir sur GitHub
-            </a>
-            </div>
-        </div>
-
-        <div class="p-6">
-            <h3 class="font-semibold text-lg text-gray-900 mb-2">Analyse d'avis clients bancaires</h3>
-            <p class="text-gray-600 text-sm mb-4">
-            Pipeline NLP complet : scraping Google Maps, analyse de sentiments, API Flask et dashboard.
-            </p>
-
-            <div class="flex flex-wrap gap-2">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">NLP</span>
-            <span class="tech-badge">NLP</span>
-            <span class="tech-badge">NLP</span>
-            <span class="tech-badge">Airflow</span>
-            </div>
-        </div>
-        </div>
-
+          </div>
         </div>
       </div>
-    </section>
-
-    <!-- FORMATION -->
-<section id="formation" class="py-20 px-6 bg-white">
-  <div class="max-w-5xl mx-auto">
-
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-gray-900 mb-3">Formation</h2>
     </div>
+  </section>
 
-    <div class="space-y-6">
-
-      <!-- INSEA -->
-      <div class="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-2xl p-6 hover:shadow-md transition">
-        <div>
-          <h3 class="text-lg font-semibold text-gray-900">
-            Master en Systèmes Intelligents et Systèmes d’Information
-          </h3>
-          <p class="text-sm text-gray-600">
-            Institut National de Statistique et d’Économie Appliquée (INSEA), Rabat
-          </p>
-          <p class="text-xs text-gray-500 mt-1">
-            Oct. 2024 – En cours
-          </p>
-        </div>
-
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/INSEA_logo.png" alt="INSEA"
-             class="h-14 object-contain ml-6">
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="py-20 px-6 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-4xl font-bold text-gray-900 mb-3">Core Skills</h2>
       </div>
 
-      <!-- LICENCE -->
-      <div class="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-2xl p-6 hover:shadow-md transition">
-        <div>
-          <h3 class="text-lg font-semibold text-gray-900">
-            Licence en Sciences et Techniques – Génie Informatique
-          </h3>
-          <p class="text-sm text-gray-600">
-            Faculté des Sciences et Techniques, Settat
-          </p>
-          <p class="text-xs text-gray-500 mt-1">
-            Sep. 2023 – Juin 2024
-          </p>
+      <!-- Skills Grid -->
+      <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-8 items-center">
+
+        <!-- Python -->
+        <div class="flex flex-col items-center gap-2">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="h-12" />
+          <span class="text-sm font-medium">Python</span>
         </div>
 
-        <img src="https://www.fsts.ac.ma/logo.png" alt="FST Settat"
-             class="h-14 object-contain ml-6">
-      </div>
-
-      <!-- DEUST -->
-      <div class="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-2xl p-6 hover:shadow-md transition">
-        <div>
-          <h3 class="text-lg font-semibold text-gray-900">
-            DEUST Mathématiques, Informatique et Physique
-          </h3>
-          <p class="text-sm text-gray-600">
-            Faculté des Sciences et Techniques, Settat
-          </p>
-          <p class="text-xs text-gray-500 mt-1">
-            Sep. 2021 – Juin 2023
-          </p>
+        <!-- SQL -->
+        <div class="flex flex-col items-center gap-2">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="h-12" />
+          <span class="text-sm font-medium">SQL</span>
         </div>
 
-        <img src="https://www.fsts.ac.ma/logo.png" alt="FST Settat"
-             class="h-14 object-contain ml-6">
-      </div>
+        <!-- Scikit-learn -->
+        <div class="flex flex-col items-center gap-2">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" class="h-12" />
+          <span class="text-sm font-medium">scikit-learn</span>
+        </div>
 
+        <!-- TensorFlow -->
+        <div class="flex flex-col items-center gap-2">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" class="h-12" />
+          <span class="text-sm font-medium">TensorFlow</span>
+        </div>
+
+        <!-- spaCy -->
+        <div class="flex flex-col items-center gap-2">
+          <img src="https://cdn-avatars.huggingface.co/v1/production/uploads/1621946385351-60acee08af553873e6d96d0c.png" class="h-12" />
+          <span class="text-sm font-medium">spaCy</span>
+        </div>
+
+        <!-- OpenCV -->
+        <div class="flex flex-col items-center gap-2">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" class="h-12" />
+          <span class="text-sm font-medium">OpenCV</span>
+        </div>
+
+        <!-- LangChain -->
+        <div class="flex flex-col items-center gap-2">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc-QRqqtRi8EEyMCDcBawEio86I7MpmwMBTw&s" class="h-12 rounded-lg" />
+          <span class="text-sm font-medium">LangChain</span>
+        </div>
+
+        <!-- Hugging Face -->
+        <div class="flex flex-col items-center gap-2">
+          <img src="https://huggingface.co/front/assets/huggingface_logo.svg" class="h-12" />
+          <span class="text-sm font-medium">Hugging Face</span>
+        </div>
+
+        <!-- Ollama -->
+        <div class="flex flex-col items-center gap-2">
+          <img src="https://ollama.com/public/ollama.png" class="h-12" />
+          <span class="text-sm font-medium">Ollama</span>
+        </div>
+
+        <!-- FastAPI -->
+        <div class="flex flex-col items-center gap-2">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" class="h-12" />
+          <span class="text-sm font-medium">FastAPI</span>
+        </div>
+
+        <!-- Docker -->
+        <div class="flex flex-col items-center gap-2">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="h-12" />
+          <span class="text-sm font-medium">Docker</span>
+        </div>
+
+        <!-- Azure -->
+        <div class="flex flex-col items-center gap-2">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" class="h-12" />
+          <span class="text-sm font-medium">Microsoft Azure</span>
+        </div>
+
+        <!-- Linux -->
+        <div class="flex flex-col items-center gap-2">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" class="h-12" />
+          <span class="text-sm font-medium">Linux</span>
+        </div>
+
+        <!-- Git -->
+        <div class="flex flex-col items-center gap-2">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="h-12" />
+          <span class="text-sm font-medium">Git</span>
+        </div>
+
+        <!-- Looker Studio -->
+        <div class="flex flex-col items-center gap-2">
+          <img src="https://www.gstatic.com/analytics-lego/svg/ic_looker_studio.svg" class="h-12" />
+          <span class="text-sm font-medium">Looker Studio</span>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CERTIFICATIONS -->
-<section id="certifications" class="py-20 px-6 bg-white">
-  <div class="max-w-5xl mx-auto">
+  <!-- EDUCATION SECTION -->
+  <section id="education" class="py-20 px-6 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900 mb-3">Education</h2>
+      </div>
 
-    <!-- Titre principal -->
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-gray-900 mb-3">
-        Certifications
+      <div class="space-y-6">
+
+        <!-- INSEA -->
+        <div class="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-2xl p-6 hover:shadow-md transition">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900">
+              Master's in Intelligent Systems and Information Systems
+            </h3>
+            <p class="text-sm text-gray-600">
+              National Institute of Statistics and Applied Economics (INSEA), Rabat
+            </p>
+            <p class="text-xs text-gray-500 mt-1">
+              Oct. 2024 – Present
+            </p>
+          </div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/INSEA_logo.png" alt="INSEA"
+               class="h-14 object-contain ml-6">
+        </div>
+
+        <!-- Bachelor's Degree -->
+        <div class="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-2xl p-6 hover:shadow-md transition">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900">
+              Bachelor's in Science and Technology – Computer Engineering
+            </h3>
+            <p class="text-sm text-gray-600">
+              Faculty of Sciences and Technology, Settat
+            </p>
+            <p class="text-xs text-gray-500 mt-1">
+              Sep. 2023 – June 2024
+            </p>
+          </div>
+          <img src="https://www.fsts.ac.ma/logo.png" alt="FST Settat"
+               class="h-14 object-contain ml-6">
+        </div>
+
+        <!-- DEUST -->
+        <div class="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-2xl p-6 hover:shadow-md transition">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900">
+              DEUST in Mathematics, Computer Science, and Physics
+            </h3>
+            <p class="text-sm text-gray-600">
+              Faculty of Sciences and Technology, Settat
+            </p>
+            <p class="text-xs text-gray-500 mt-1">
+              Sep. 2021 – June 2023
+            </p>
+          </div>
+          <img src="https://www.fsts.ac.ma/logo.png" alt="FST Settat"
+               class="h-14 object-contain ml-6">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS SECTION -->
+  <section id="certifications" class="py-20 px-6 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900 mb-3">
+          Certifications
+        </h2>
+      </div>
+
+      <!-- Certifications Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Certification 1 -->
+        <a href=""
+           target="_blank"
+           class="group border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition">
+          <img src="images/certifs/certif1.jpg"
+               alt="Certification 1"
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </a>
+
+        <!-- Certification 2 -->
+        <a href=""
+           target="_blank"
+           class="group border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition">
+          <img src="images/certifs/certif2.jpg"
+               alt="Certification 2"
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </a>
+
+        <!-- Certification 3 -->
+        <a href=""
+           target="_blank"
+           class="group border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition">
+          <img src="images/certifs/certif5.png"
+               alt="Certification 3"
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </a>
+
+        <!-- Certification 4 -->
+        <a href=""
+           target="_blank"
+           class="group border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition">
+          <img src="images/certifs/certif4.jpg"
+               alt="Certification 4"
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-12 px-6 bg-gray-50">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+        Contact Me
       </h2>
-      <p class="text-gray-600">
-        Formations certifiantes en Intelligence Artificielle, Data & Cloud
+      <p class="text-gray-600 mb-6">
+        Feel free to reach out via email for any inquiries or opportunities.
       </p>
+      <a href="mailto:yassinedarif2003@gmail.com"
+         class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition">
+        <i class="fas fa-envelope"></i> yassinedarif2003@gmail.com
+      </a>
     </div>
+  </section>
 
-    <!-- Grille des certificats -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <!-- FOOTER -->
+  <footer class="border-t border-gray-200 py-6 text-center text-sm text-gray-500">
+    © <script>document.write(new Date().getFullYear())</script> Yassine Darif. All rights reserved.
+  </footer>
 
-      <!-- Certif 1 -->
-      <a href="https://www.coursera.org/account/accomplishments/verify/XXXX"
-         target="_blank"
-         class="group border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition">
-        <img src="./certifs/certif1.jpg"
-             alt="Certification 1"
-             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-      </a>
+</div> <!-- End of main container -->
 
-      <!-- Certif 2 -->
-      <a href="https://www.coursera.org/account/accomplishments/verify/YYYY"
-         target="_blank"
-         class="group border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition">
-        <img src="./certifs/certif2.jpg"
-             alt="Certification 2"
-             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-      </a>
+<!-- Mobile Menu Script -->
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
 
-      <!-- Certif 3 -->
-      <a href="https://www.coursera.org/account/accomplishments/verify/ZZZZ"
-         target="_blank"
-         class="group border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition">
-        <img src="./certifs/certif3.jpg"
-             alt="Certification 3"
-             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-      </a>
-
-      <!-- Certif 4 -->
-      <a href="https://www.coursera.org/account/accomplishments/verify/AAAA"
-         target="_blank"
-         class="group border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition">
-        <img src="./certifs/certif4.jpg"
-             alt="Certification 4"
-             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-      </a>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-
-    <!-- FOOTER -->
-    <footer class="border-t border-gray-200 py-6 text-center text-sm text-gray-500">
-      © <script>document.write(new Date().getFullYear())</script> Yassine Darif. Tous droits réservés.
-    </footer>
-
-  </div> <!-- Fin du conteneur principal -->
-
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
 </body>
 </html>
